@@ -43,29 +43,31 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 Developed by: MERIL GOLDLINA A RegisterNumber: 24007299
 
 ```
-module sr_ff(s,r,clk,q,qbar);
+module sr_ff(s,r,clk,Q,Qbar);
 input s,r,clk;
-output reg q;
-output reg qbar;
+output reg Q;
+output reg Qbar;
 initial 
 begin
-q=0;
-qbar=1;
+Q=0;
+Qbar=1;
 end
 always @(posedge clk)
 begin
-   q=s|(~r&q);
-   qbar=r|(~s&~q);
+   Q=s|(~R&Q);
+   Qbar=r|(~S&~Q);
 end
 endmodule
 ```
 **RTL LOGIC FOR FLIPFLOPS**
 
-![image](https://github.com/user-attachments/assets/540afd4d-10ea-4a3a-bef2-e6973a0bdbaa)
+![image](https://github.com/user-attachments/assets/4ae884e3-4742-4a76-bbe0-f99ef229bdd7)
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-![image](https://github.com/user-attachments/assets/a05d3c80-4c40-4c84-836a-357997d4ea90)
+![398732542-1c6c18b7-708d-4bc8-86a3-2b02c9df47ce](https://github.com/user-attachments/assets/7445a57f-9c9d-4877-a463-b4b2920fa211)
+
 
 **RESULTS**
 
